@@ -14,7 +14,7 @@ rather than taking a dependency.
 To use this build project just add a submodule to your project:
 
 ```
-git submodule add https://github.com/crossplane/build build
+git submodule add https://github.com/kualaz/build build
 ```
 
 and add a `Makefile` in the root. For example, the following will build a go
@@ -23,7 +23,7 @@ project that publishes containers and helm charts.
 ```
 # Project Setup
 PROJECT_NAME := myrepo
-PROJECT_REPO := github.com/crossplane/$(PROJECT_NAME)
+PROJECT_REPO := github.com/kualaz/$(PROJECT_NAME)
 
 PLATFORMS ?= linux_amd64 linux_arm64
 include build/makelib/common.mk
