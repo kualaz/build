@@ -1,8 +1,5 @@
-# Build
-
-This project - commonly known as "the build submodule" -  is Crossplane's
-Makefile library. This library is used to build `crossplane/crossplane`,
-`crossplane/crossplane-runtime`, and most Crossplane providers.
+# GoBuild
+A specialized fork of Crossplane's Makefile library focused on streamlining Go module builds.
 
 The build submodule is only intended to support Crossplane and its extensions.
 There's no guarantee of stability. There are no releases or versions, and any
@@ -25,7 +22,7 @@ project that publishes containers and helm charts.
 PROJECT_NAME := myrepo
 PROJECT_REPO := github.com/kualaz/$(PROJECT_NAME)
 
-PLATFORMS ?= linux_amd64 linux_arm64
+PLATFORMS ?= darwin_arm64 linux_amd64 linux_arm64
 include build/makelib/common.mk
 
 S3_BUCKET ?= crossplane.releases/myrepo
